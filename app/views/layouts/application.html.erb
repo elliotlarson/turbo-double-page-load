@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Foo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= javascript_pack_tag asset_name, 'data-turbo-track': 'reload' %>
+    <% asset_name = controller.action_name == "page1" ? "application1" : "application2" %>
+    <%= stylesheet_link_tag "application", media: 'all', 'data-turbo-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
